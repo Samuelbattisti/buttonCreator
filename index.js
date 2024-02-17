@@ -1,8 +1,11 @@
-const contoles = document.querySelector('.controles')
+const controles = document.querySelector('.controles')
 const css = document.querySelector('.css')
 const btn = document.querySelector('.btnClique')
+const button = document.querySelector('.btn')
 
-contoles.addEventListener('change', mudancas)
+button.addEventListener('click', e => e.preventDefault())
+
+controles.addEventListener('change', mudancas)
 
 const style = {
 
@@ -40,10 +43,24 @@ function mudancas(event) {
     const eventValue = event.target.value
 
     style[eventName](eventValue)
+    salvarValores(eventName, eventValue)
     mostrarCss()
 }
 
 function mostrarCss() {
     css.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>')
- 
+}
+
+function setarValor() {
+    const propriedades = Object.keys(localStorage)
+    const valores = Object.values(localStorage)
+    propriedades.forEach((propriedade) => {
+        style[propriedade](localStorage[propriedade])
+        controles.elements[propriedade].value = localStorage[propriedade]
+    })
+    mostrarCss()
+}
+setarValor()
+function salvarValores(nome, valor) {
+    localStorage[nome] = valor
 }
