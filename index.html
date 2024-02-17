@@ -11,7 +11,7 @@
 <body>
 
   <section class="btn-creator">
-    
+
     <form action="" class="controles">
       <h1><button class="btn">Button</button> Creator</h1>
       <label for="texto">Texto:</label>
@@ -23,33 +23,38 @@
       <label for="backgroundColor">Background-color:</label>
       <input type="color" name="backgroundColor" id="backgroundColor">
 
-      <label for="Heigth">Heigth:</label>
-      <input type="range" name="Heigth" id="Heigth" min="0" max="200">
+      <label for="fontSize">Font-size:</label>
+      <input type="range" name="fontSize" id="fontSize" min="0" max="100">
+
+      <label for="width">width:</label>
+      <input type="range" name="width" id="width" min="0" max="700"">
+
+      <label for=" heigth">Heigth:</label>
+      <input type="range" name="heigth" id="heigth" min="0" max="300">
+
 
       <label for="border">Border:</label>
-      <input type="text" name="border" id="border" min="0" max="600">
-
+      <input type="text" name="border" id="border">
+      <small>Ex: 2px solid #fff</small>
       <label for="borderRadius">Border-radius:</label>
       <input type="text" name="borderRadius" id="borderRadius" min="0" max="20">
 
       <label for="fontFamily">Font-family:</label>
       <select name="fontFamily" id="fontFamily">
-     
+
         <option value="Arial">Arial</option>
         <option value="Georgia">Georgia</option>
         <option value="monospace">Monospace</option>
       </select>
 
 
-      <label for="fontSize">Font-size:</label>
-      <input type="number" name="fontSize" id="fontSize" min="0">
 
     </form>
   </section>
   <section class="resultado">
-    <button class="clique">Clique</button>
+    <button class="btnClique">Clique</button>
     <pre><code class="css">
-      <span>backgroundColor: red</span>
+    
     </code></pre>
   </section>
   <script src="index.js"> </script>
